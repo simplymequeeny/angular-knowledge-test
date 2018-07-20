@@ -1,0 +1,31 @@
+<h1>Task2:</h1>
+
+<h4>This task is about Data Bindings and Filters</h4>
+
+<ul>
+  <li>Find prepared mock data</li>
+  <li>Change the product total value into a properly formatted price</li>
+  <li>Click '<i class="fa fa-minus"></i>' and '<i class="fa fa-plus"></i>' to adjust the amount</li>
+  <li>Click '<i class="fa fa-trash-o"></i>' to remove a product</li>
+  <li>Total price automatically recalculated if user removes a product or change its amount</li>
+  <li>Amount can never go below zero</li>
+</ul>
+
+<h4>Target preview:</h4>
+<button *ngIf="!showPreview" (click)="showPreview = true">Show</button>
+<button *ngIf="showPreview" (click)="showPreview = false">Hide</button>
+<div class="preview-area">
+  <img [src]="target" *ngIf="showPreview">
+</div>
+
+<h4>Your work:</h4>
+<div class="code-area">
+  <ul class="shopping-cart ">
+    <li *ngIf="mockData.length==0">Your cart is empty</li>
+    <!--TODO List of Products-->
+  </ul>
+  <h4 class="total-value">
+    <!--TODO Calculate Totals-->
+  </h4>
+</div>
+
